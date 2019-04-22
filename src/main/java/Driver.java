@@ -7,7 +7,7 @@ import StrategyPattern.Quacks.Quack;
 import StrategyPattern.Quacks.QuackBehaviour;
 
 public class Driver {
-    public static void main(String args[]) {
+    private static void driveStrategyPattern(){
         Duck mallardDuck = new MallardDuck();
         FlyBehaviour flyBehaviour = new FlyWithWings();
         QuackBehaviour quackBehaviour = new Quack();
@@ -21,5 +21,9 @@ public class Driver {
         // Changing behaviour on the fly
         mallardDuck.setFlyBehaviour(flyBehaviour);
         mallardDuck.performFly();
+    }
+
+    public static void main(String args[]) {
+        driveStrategyPattern();
     }
 }
